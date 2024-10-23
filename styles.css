@@ -3,55 +3,106 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #282c34;
-    color: white;
-    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #4a90e2, #9013fe);
+    color: black; /* Цвет текста по умолчанию */
+    font-family: 'Impact', sans-serif; /* Шрифт Impact */
 }
 
 .container {
     text-align: center;
-    background-color: #3b4045;
+    background-color: white; /* Белый фон для окна */
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Тень для глубины */
+    width: 90%; /* Установить ширину контейнера */
+    max-width: 400px; /* Максимальная ширина для больших экранов */
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 20px;
+    background: linear-gradient(135deg, #4a90e2, #9013fe); /* Градиентный фон для текста */
+    -webkit-background-clip: text; /* Обрезать фон по тексту */
+    -webkit-text-fill-color: transparent; /* Сделать цвет текста прозрачным */
+    text-fill-color: transparent; /* Совместимость с другими браузерами */
 }
 
 #coinCount, #clickValue, #passiveIncome {
     font-size: 1.5em;
     margin-bottom: 20px;
+    background: linear-gradient(135deg, #4a90e2, #9013fe); /* Градиентный фон для текста */
+    -webkit-background-clip: text; /* Обрезать фон по тексту */
+    -webkit-text-fill-color: transparent; /* Сделать цвет текста прозрачным */
+    text-fill-color: transparent; /* Совместимость с другими браузерами */
 }
 
 #clickImage {
-    width: 200px; /* Задайте нужный размер изображения */
+    width: 80%; /* Увеличьте ширину изображения для мобильных устройств */
+    max-width: 200px; /* Максимальная ширина изображения */
     cursor: pointer;
     transition: transform 0.2s;
-    user-select: none; /* Запретить выделение текста */
-}
-
-#clickImage:hover {
-    transform: scale(1.1); /* Увеличение при наведении */
 }
 
 .upgrades, .skin-shop {
     margin-top: 20px;
+    padding: 20px; /* Добавить отступ для секций */
+    border-radius: 10px; /* Закругленные углы для секций */
+}
+
+.upgrades {
+    background-color: #f0f0f0; /* Светлая секция для улучшений */
+}
+
+.skin-shop {
+    background-color: #e0f7fa; /* Светло-голубой фон для магазина скинов */
+    border: 2px solid #4a90e2; /* Граница для выделения */
 }
 
 .upgrades button, .skin-shop button {
-    padding: 10px 20px;
-    font-size: 1em;
+    padding: 12px 20px; /* Увеличить отступ кнопок */
+    font-size: 1.2em; /* Увеличить размер шрифта для кнопок */
     cursor: pointer;
     background-color: #61dafb;
     border: none;
     border-radius: 5px;
     margin: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень для кнопок */
+    width: 100%; /* Кнопки занимают 100% ширины контейнера */
 }
 
 .upgrades button:hover, .skin-shop button:hover {
     background-color: #21a1f1;
+    transform: translateY(-2px); /* Подъем кнопки при наведении */
+}
+
+.upgrades button:active, .skin-shop button:active {
+    transform: translateY(0); /* Возвращение кнопки на место при нажатии */
+}
+
+.skin-shop h2 {
+    background: linear-gradient(135deg, #4a90e2, #9013fe); /* Градиентный фон для текста */
+    -webkit-background-clip: text; /* Обрезать фон по тексту */
+    -webkit-text-fill-color: transparent; /* Сделать цвет текста прозрачным */
+    text-fill-color: transparent; /* Совместимость с другими браузерами */
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5em; /* Уменьшить размер заголовка на мобильных устройствах */
+    }
+
+    #coinCount, #clickValue, #passiveIncome {
+        font-size: 1.2em; /* Уменьшить размер текста для мобильных устройств */
+    }
+
+    #clickImage {
+        width: 100%; /* Изображение занимает 100% ширины на мобильных устройствах */
+    }
+
+    .upgrades button, .skin-shop button {
+        padding: 10px 0; /* Уменьшить отступ кнопок на мобильных устройствах */
+        font-size: 1em; /* Уменьшить размер шрифта для кнопок */
+    }
 }
