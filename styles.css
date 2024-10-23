@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    text-align: center;
+    background-color: #3b4045;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#coinCount, #clickValue, #passiveIncome {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#clickImage {
+    width: 200px; /* Задайте нужный размер изображения */
+    cursor: pointer;
+    transition: transform 0.2s;
+    user-select: none; /* Запретить выделение текста */
+}
+
+#clickImage:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+.upgrades, .skin-shop {
+    margin-top: 20px;
+}
+
+.upgrades button, .skin-shop button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.upgrades button:hover, .skin-shop button:hover {
+    background-color: #21a1f1;
+}
